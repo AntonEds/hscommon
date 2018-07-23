@@ -1,4 +1,4 @@
-var HsCommon = !function () {
+var HsCommon = (function () {
   /**
    * format: 6 minutes ago - Afternoon (11:41)
    * Morning 5 am to 12 pm
@@ -59,4 +59,4 @@ var HsCommon = !function () {
     getHourMinuteFormat : getHourMinuteFormat,
     isLocaleTimeFormat12: isLocaleTimeFormat12
   }
-}();
+})();

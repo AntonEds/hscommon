@@ -1,0 +1,21 @@
+{
+  "name": "hscommon",
+  "version": "0.0.1",
+  "authors": [
+    "Anton <a.buraik@edsson.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "^2.22.2"
+  }
+}

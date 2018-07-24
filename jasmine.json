@@ -1,0 +1,12 @@
+{
+  "spec_dir": "",
+  "spec_files": [
+    "src/*.spec.js"
+  ],
+  "helpers": [
+    "bower_components/moment/moment.js",
+    "src/hs-common.js"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": true
+}

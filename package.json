@@ -1,0 +1,30 @@
+{
+  "name": "hscommon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "uglifyjs-webpack-plugin": "^1.2.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jasmine": "^3.1.0"
+  },
+  "scripts": {
+    "test": "babel-node ./run.js",
+    "build": "webpack --define process.env.NODE_ENV=\"'production'\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonEds/hscommon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonEds/hscommon/issues"
+  },
+  "homepage": "https://github.com/AntonEds/hscommon#readme"
+}

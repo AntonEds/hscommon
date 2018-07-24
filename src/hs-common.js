@@ -1,11 +1,3 @@
-'use strict';
-
-var _moment = require('../bower_components/moment/src/moment');
-
-var _moment2 = _interopRequireDefault(_moment);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 var HsCommon = function (moment) {
   /**
    * format: 6 minutes ago - Afternoon (11:41)
@@ -16,9 +8,9 @@ var HsCommon = function (moment) {
    * @returns {string}
    */
   function timeAgo(value) {
-    var val = moment(value).fromNow(),
-        type = moment(value).format('a'),
-        hour = moment(value).hour(),
+    var val    = moment(value).fromNow(),
+        type   = moment(value).format('a'),
+        hour   = moment(value).hour(),
         prefix = '';
     switch (type) {
       case 'am':
@@ -37,7 +29,7 @@ var HsCommon = function (moment) {
         break;
     }
     val += ' - ' + prefix + ' ';
-    val += '(' + moment(value).format(getHourMinuteFormat()) + ')'; //hh for am pm format
+    val += '(' + moment(value).format(getHourMinuteFormat()) + ')';//hh for am pm format
 
     return val;
   }
@@ -46,7 +38,7 @@ var HsCommon = function (moment) {
    * @returns {string}
    */
   function getHourMinuteFormat() {
-    return isLocaleTimeFormat12() ? 'hh:mm' : 'HH:mm';
+    return (isLocaleTimeFormat12()) ? 'hh:mm' : 'HH:mm';
   }
 
   /**
@@ -57,15 +49,15 @@ var HsCommon = function (moment) {
    * @returns boolean
    */
   function isLocaleTimeFormat12() {
-    var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0)),
+    var date       = new Date(Date.UTC(2012, 11, 12, 3, 0, 0)),
         dateString = date.toLocaleTimeString();
     return !!(dateString.match(/am|pm/i) || date.toString().match(/am|pm/i));
   }
 
   return {
-    timeAgo: timeAgo,
-    getHourMinuteFormat: getHourMinuteFormat,
+    timeAgo             : timeAgo,
+    getHourMinuteFormat : getHourMinuteFormat,
     isLocaleTimeFormat12: isLocaleTimeFormat12
-  };
-}(_moment2.default);
+  }
+};
 module.exports = HsCommon;
